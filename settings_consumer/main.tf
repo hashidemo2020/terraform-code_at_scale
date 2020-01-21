@@ -4,7 +4,9 @@ module "lookup" {
 }
 
 resource "null_resource" "rotate" {
-  triggers = "${module.lookup.connection_string}"
+  triggers = {
+    connection_string = "${module.lookup.connection_string}"
+  }
 }
 
 output "database_connection_string" {
