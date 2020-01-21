@@ -22,3 +22,18 @@ resource "random_pet" "random" {
 output "server" {
   value = "${random_pet.random.id}"
 }
+
+# Random password
+resource "random_string" "random" {
+  keepers {
+    uuid = "${uuid()}"
+  }
+  length  = 8
+  special = false
+}
+
+# Output password
+output "password" {
+  value     = "${random_string.random.id}"
+  sensitive = true
+}
