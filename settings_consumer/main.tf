@@ -1,5 +1,5 @@
 module "lookup" {
-  source  = "app.terraform.io/hashijit/lookup/random"
+  source  = "app.terraform.io/fidelity_tfe_demo/lookup/random"
   version = "0.0.9"
 }
 
