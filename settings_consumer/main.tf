@@ -1,6 +1,6 @@
 module "lookup" {
   source  = "app.terraform.io/hashijit/lookup/random"
-  version = "0.0.1"
+  version = "0.0.9"
 }
 
 resource "null_resource" "rotate" {
